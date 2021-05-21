@@ -6,10 +6,6 @@ Option Explicit
 ' ===================================================
 
 
-
-
-
-
 Sub Main()
 Dim LoopStart As Double
 Dim msgBinary(1 To 18) As Byte, n As Long, strBinary As String
@@ -20,9 +16,7 @@ Next
 
 Call Initialize
 
-'wsServer = "echo.websocket.org"
-wsServer = "192.168.1.10"
-wsPort = 8080
+wsServer = "echo.websocket.org"
 
 Call Connect
 If wsState = 3 Then  ' connected, so continue
