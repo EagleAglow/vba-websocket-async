@@ -233,7 +233,7 @@ wsRequestHandle = 0
 result = WinHttpSetOption(wsWebSocketHandle, WINHTTP_OPTION_CONTEXT_VALUE, VarPtr(wsContextPointer), 4) '4 bytes for pointer
 If result = 0 Then ' failed
   wsState = 1  ' note: httpState is still 3 (connected)
-  wsErrorText = "Setting websocket context failed"
+  wsErrorText = "Setting websocket context failed. Error:" & dwError & ":" & GetLastError
   If debugPrint Then Debug.Print wsErrorText
   Exit Sub
 End If
