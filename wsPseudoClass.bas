@@ -230,7 +230,7 @@ wsRequestHandle = 0
 ' WINHTTP_CALLBACK_STATUS_HANDLE_CLOSING to confirm that the websocket is closing. And,
 ' to generate that particular callback, the websocket handle must have a non-Null context
 ' value. So, set wsWebSocketHandle "context", with a pointer to a pointer.
-result = WinHttpSetOption(wsWebSocketHandle, WINHTTP_OPTION_CONTEXT_VALUE, VarPtr(wsContextPointer), 4) '4 bytes for pointer
+result = WinHttpSetOption(wsWebSocketHandle, WINHTTP_OPTION_CONTEXT_VALUE, VarPtr(wsContextPointer), LenB(wsContextPointer))
 If result = 0 Then ' failed
   wsState = 1  ' note: httpState is still 3 (connected)
   wsErrorText = "Setting websocket context failed. Error:" & dwError & ":" & GetLastError
