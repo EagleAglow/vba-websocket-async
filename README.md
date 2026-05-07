@@ -3,4 +3,6 @@
 
 This is a VBA client that uses asynchronous calls for the Websocket protocol.  Since this is VBA, it isn't completely "asynchronous", but this is as close as I can get. Feel free to suggest changes, or take over the project.
 
-The "bas" files for can be imported into (Windows only) VBA to make a client that works with an echo server, thanks to: https://websocket.org/
+The "bas" files for can be imported into (Windows only) VBA to make a client that works with an echo server.  Check out: https://piehost.com/websocket/echo-websocket-server
+
+For a much more polished implementation, check out: https://github.com/uesleibros/wasabi
